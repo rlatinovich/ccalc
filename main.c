@@ -22,7 +22,10 @@ int main()
 		printf("pop(): 	%d\n", stk_pop(&stk));
 	printf("\n=== END OF STACK TESTCASE ===\n");
 
-	printf("%d\n", eval_postfix("12+"));
+	printf("\n=== RPC TESTCASE ===\n");
+	char *p = "123++";
+	printf("%s = %d\n", p, eval_postfix(p));
+	printf("\n=== END OF RPC TESTCASE ===\n");
 	return 0;
 }
 
