@@ -5,6 +5,8 @@ char* getstring(int);
 int main()
 {
 	int i;
+
+	printf("\n=== STACK TESTCASES ===\n");
 	stack stk;
 	stk_init(&stk);
 
@@ -18,6 +20,9 @@ int main()
 
 	for (i = 0; i < 2; i++)
 		printf("pop(): 	%d\n", stk_pop(&stk));
+	printf("\n=== END OF STACK TESTCASE ===\n");
+
+	printf("%d\n", eval_postfix("12+"));
 	return 0;
 }
 
