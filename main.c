@@ -4,6 +4,7 @@ char* getstring(int);
 
 int main()
 {
+	int i;
 	stack stk;
 	stk_init(&stk);
 
@@ -15,6 +16,8 @@ int main()
 
 	printf("peek(): %d\n", stk_peek(stk));
 
+	for (i = 0; i < 2; i++)
+		printf("pop(): 	%d\n", stk_pop(&stk));
 	return 0;
 }
 
