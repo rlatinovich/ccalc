@@ -13,6 +13,8 @@ int main()
 	stk_push(&stk, 96);
 	stk_print(stk);
 
+	printf("peek(): %d\n", stk_peek(stk));
+
 	return 0;
 }
 
