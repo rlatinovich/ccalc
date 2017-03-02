@@ -27,6 +27,10 @@ int eval_postfix(char *s)
 		}
 
 	}
-	int r = stk_pop(&stk);
-	return r;
+	return stk_pop(&stk);
+}
+
+int getop(char *s)
+{
+	return NUMBER;
 }
