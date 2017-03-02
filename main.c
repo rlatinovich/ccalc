@@ -8,6 +8,10 @@ int main()
 	stk_init(&stk);
 
 	stk_print(stk);
+	stk_push(&stk, 10);
+	stk_push(&stk, 69);
+	stk_push(&stk, 96);
+	stk_print(stk);
 
 	return 0;
 }

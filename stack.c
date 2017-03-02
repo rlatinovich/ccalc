@@ -14,11 +14,13 @@ int stk_push(struct int_stack *stk, int n)
 	if (NULL == nnode) 
 		return FAIL;
 
-	struct int_node *tnode = stk->root;
-
 	nnode->value = n;
-	nnode->next = tnode;
-	
+	nnode->next = stk->root;
+	stk->root = nnode;
+
+	stk->size++;
+
+	return SUCCESS;	
 }
 
 int stk_pop(struct int_stack *stk)
@@ -43,7 +45,7 @@ void stk_print(struct int_stack stk)
 
 	while (temp != NULL)
 	{
-		temp = temp->next;
 		printf("%d\n", temp->value);
+		temp = temp->next;
 	}
 }
