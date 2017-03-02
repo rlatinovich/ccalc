@@ -11,7 +11,7 @@ $(EXEC): $(OBJS)
 main.o: main.c ccalc.h
 	$(CC) $(CFLAGS) main.c
 
-stack.o: stack.c stack.h
+stack.o: stack.c ccalc.h
 	$(CC) $(CFLAGS) stack.c
 
 clean:

@@ -4,8 +4,11 @@ char* getstring(int);
 
 int main()
 {
-	char *s = getstring(5);
-	printf("%s\n", s);
+	stack stk;
+	stk_init(&stk);
+
+	stk_print(stk);
+
 	return 0;
 }
 
