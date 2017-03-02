@@ -1,7 +1,5 @@
 #include "ccalc.h"
 
-int eval_postfix(char*);
-
 int eval_postfix(char *s)
 {
 	stack stk;
