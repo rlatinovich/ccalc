@@ -32,8 +32,7 @@ int stk_pop(struct int_stack *stk)
 
 int stk_peek(struct int_stack stk)
 {
-	
-	return SUCCESS;
+	return stk.root->value;
 }
 
 void stk_print(struct int_stack stk)
