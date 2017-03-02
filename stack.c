@@ -25,9 +25,20 @@ int stk_push(struct int_stack *stk, int n)
 
 int stk_pop(struct int_stack *stk)
 {
+	int v;
+	struct int_node *tnode;
 
+	if (NULL == stk->root)
+		return FAIL;
 
-	return SUCCESS;
+	tnode = stk->root;
+	v = stk->root->value;
+	
+	stk->root = tnode->next;
+
+	free(tnode);
+
+	return v;
 }
 
 int stk_peek(struct int_stack stk)
