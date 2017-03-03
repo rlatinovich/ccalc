@@ -22,6 +22,26 @@ int main()
 		printf("pop(): 	%d\n", stk_pop(&stk));
 	printf("\n=== END OF STACK TESTCASE ===\n");
 
+	
+	printf("\n=== SCANNER TESTCASES ===\n");
+
+	struct scanner sc;
+	char *s = "Hello 69, World!";
+
+	scnr_init(&sc, s);
+	
+	printf("string: 	%s\n", s);
+	printf("hasnext(): 	%d\n", scnr_hasnext(sc));
+	printf("next(): 	%c\n", (char)scnr_next(&sc));	
+	printf("next(): 	%c\n", (char)scnr_next(&sc));
+	printf("hasnextint(): 	%d\n", scnr_hasnextint(sc));
+	printf("nextint():	%d\n", scnr_nextint(&sc));
+	printf("next():		%c\n", (char)scnr_next(&sc));
+	printf("next():		%c\n", (char)scnr_next(&sc));
+	printf("next():		%c\n", (char)scnr_next(&sc));
+	printf("\n=== END OF SCANNER TESTCASE ===\n");
+
+
 	printf("\n=== RPC TESTCASE ===\n");
 	char *p = "123++";
 	printf("%s = %d\n", p, eval_postfix(p));
