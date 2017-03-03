@@ -21,13 +21,7 @@ int scnr_next(struct scanner *sc)
 
 int scnr_hasnextint(struct scanner sc)
 {
-	int i;
-	for (i = sc.index; i < sc.length; i++)
-	{
-		if (sc.s[i] >= 48 && sc.s[i] <= 57)
-			return 1;
-	}
-	return 0;
+	return (isdigit(sc.s[sc.index])) ? 1 : 0;
 }
 
 int scnr_nextint(struct scanner *sc)
