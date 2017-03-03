@@ -4,14 +4,14 @@
 struct scanner
 {
 	int index;
+	int length;
 	char *s;
 };
 
 void scnr_init(struct scanner*, char*);
 int scnr_hasnext(struct scanner);
 int scnr_next(struct scanner*);
+int scnr_hasnextint(struct scanner);
 int scnr_nextint(struct scanner*);
-int scnr_nextchar(struct scanner*);
-int scnr_free(struct scanner*);
 
 #endif
