@@ -1,4 +1,4 @@
-OBJS = main.o stack.o postfix.o
+OBJS = main.o stack.o postfix.o scanner.o
 CC = gcc
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
@@ -16,6 +16,9 @@ stack.o: stack.c ccalc.h
 
 postfix.o: postfix.c ccalc.h
 	$(CC) $(CFLAGS) postfix.c
+
+scanner.o: scanner.c ccalc.h
+	$(CC) $(CFLAGS) scanner.c
 
 clean:
 	\rm $(OBJS) $(EXEC)
