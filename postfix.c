@@ -1,4 +1,5 @@
 #include "ccalc.h"
+#include <math.h>
 
 int eval_postfix(char *s)
 {
@@ -36,6 +37,17 @@ int eval_postfix(char *s)
 				op2 = stk_pop(&stk);
 				op1 = stk_pop(&stk);
 				stk_push(&stk, op1 / op2);
+				break;
+			case '%':
+				op2 = stk_pop(&stk);
+				op1 = stk_pop(&stk);
+				stk_push(&stk, op1 % op2);
+				break;
+			case '^':
+				op2 = stk_pop(&stk);
+				op1 = stk_pop(&stk);
+				stk_push(&stk, (int) pow((double)op1, 
+							(double)op2));
 				break;
 			}
 		}
