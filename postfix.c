@@ -36,7 +36,10 @@ int eval_postfix(char *s)
 			case '/':
 				op2 = stk_pop(&stk);
 				op1 = stk_pop(&stk);
-				stk_push(&stk, op1 / op2);
+				if (0 == op2)
+					printf("postfix: divide by 0\n");
+				else
+					stk_push(&stk, op1 / op2);
 				break;
 			case '%':
 				op2 = stk_pop(&stk);
