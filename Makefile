@@ -2,7 +2,7 @@ OBJS = main.o stack.o postfix.o scanner.o
 CC = gcc
 DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
-LFLAGS = -Wall $(DEBUG)
+LFLAGS = -Wall $(DEBUG) -lm
 EXEC = ccalc
 
 $(EXEC): $(OBJS)
