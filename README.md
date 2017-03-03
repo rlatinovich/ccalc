@@ -8,3 +8,7 @@ Written by: Rade Latinovich
  -	Start of project
  -	stack methods work properly
  - started to work on RPC calculator
+
+# 03 March, 2017
+ - started to work on a scanner structure
+   to make it easier to implement RPC calculator
