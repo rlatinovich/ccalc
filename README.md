@@ -4,6 +4,7 @@ Postfix expression calculator written in C
 Written by: Rade Latinovich
 
 
+## Project Progress Updates
 # 02 March, 2017
  -	Start of project
  -	stack methods work properly
