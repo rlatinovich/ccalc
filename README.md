@@ -1,5 +1,5 @@
 # ccalc
-Expression calculator written in C
+Postfix expression calculator written in C
 
 Written by: Rade Latinovich
 
@@ -12,3 +12,5 @@ Written by: Rade Latinovich
 # 03 March, 2017
  - started to work on a scanner structure
    to make it easier to implement RPC calculator
+ - got postfix working properly
+ - updated main to take input strings for postfix evaluation
