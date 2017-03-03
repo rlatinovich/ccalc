@@ -3,29 +3,42 @@
 int eval_postfix(char *s)
 {
 	stack stk;
+	scanner sc;
+
 	stk_init(&stk);
+	scnr_init(&sc, s);
 
-	int i, op1, op2;
-	char ch;
-
-	i = 0;
-	while ( (ch = s[i++] ) != '\0' )
+	while (scnr_hasnext(sc))
 	{
-		if (isdigit(ch))
-			stk_push(&stk, (int) ch-'0');
+		if (1 == scnr_hasnextint(sc))
+			stk_push(&stk, scnr_nextint(&sc));
 		else
 		{
-			op2 = stk_pop(&stk);
-			op1 = stk_pop(&stk);
-			switch (ch)
+			int op1, op2;
+			switch (scnr_next(&sc))
 			{
-			case '+': stk_push(&stk, op1+op2); break;
-			case '-': stk_push(&stk, op1-op2); break;
-			case '*': stk_push(&stk, op1*op2); break;
-			case '/': stk_push(&stk, op1/op2); break;
+			case '+':
+				op2 = stk_pop(&stk);
+				op1 = stk_pop(&stk);
+				stk_push(&stk, op1+op2);
+				break;
+			case '-':
+				op2 = stk_pop(&stk);
+				op1 = stk_pop(&stk);
+				stk_push(&stk, op1-op2);
+				break;
+			case '*':
+				op2 = stk_pop(&stk);
+				op1 = stk_pop(&stk);
+				stk_push(&stk, op1 * op2);
+				break;
+			case '/':
+				op2 = stk_pop(&stk);
+				op1 = stk_pop(&stk);
+				stk_push(&stk, op1 / op2);
+				break;
 			}
 		}
-
 	}
 	return stk_pop(&stk);
 }
