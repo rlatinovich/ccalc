@@ -43,7 +43,7 @@ int main()
 
 
 	printf("\n=== RPC TESTCASE ===\n");
-	char *p = "123++";
+	char *p = "1 2 3 + +";
 	printf("%s = %d\n", p, eval_postfix(p));
 	printf("\n=== END OF RPC TESTCASE ===\n");
 	return 0;
