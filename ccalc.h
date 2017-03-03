@@ -4,3 +4,4 @@
 
 #include "stack.h"
 #include "post.h"
+#include "scanner.h"
