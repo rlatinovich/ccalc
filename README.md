@@ -3,6 +3,12 @@ Postfix expression calculator written in C
 
 Written by: Rade Latinovich
 
+### Current Limitations of ccalc
+ - Only supports use of integers
+ - Only supports 5 operations
+    - Addition / Subtraction
+    - Multiplication / Division
+    - Exponentiation
 
 ## Project Progress Updates
 ### 02 March, 2017
