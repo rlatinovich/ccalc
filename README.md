@@ -9,6 +9,16 @@ Written by: Rade Latinovich
     - Addition / Subtraction
     - Multiplication / Division
     - Exponentiation
+    
+### Example inputs/outputs
+I: 12 3 +
+O: 15
+
+I: 12 3 + 34 12 - *
+O: 330
+
+I: 2 10 ^ 12 /
+O: 85
 
 ## Project Progress Updates
 ### 02 March, 2017
